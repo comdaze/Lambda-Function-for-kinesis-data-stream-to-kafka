@@ -2,7 +2,7 @@ from kafka import KafkaProducer
 import base64
 
 def lambda_handler(event, context):
-    producer = KafkaProducer(bootstrap_servers="b-2.demo-cluster-1.riia5x.c4.kafka.cn-north-1.amazonaws.com.cn:9092,b-1.demo-cluster-1.riia5x.c4.kafka.cn-north-1.amazonaws.com.cn:9092")
+    producer = KafkaProducer(bootstrap_servers="b-2.kafka.server:9092,b-1.kafka.server:9092")
     print(producer.bootstrap_connected())
    
     for record in event['Records']:
